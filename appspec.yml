@@ -6,6 +6,8 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/cafeflow
+    overwrite: yes # 이미 존재하는 파일일 경우 발생하는 에러 해결
+file_exists_behavior: OVERWRITE
 
 # permissions - 애플리케이션 팡리에 대한 권한을 정의
 # 현재는 "/home/ubuntu/cafeflow" 디렉토리의 그룹과 소유자를 ubuntu로 설정

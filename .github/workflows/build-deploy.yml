@@ -33,7 +33,7 @@ jobs:
 
       # zip 파일 생성
       - name: Make Zip File
-        run: zip -qq -r ./$GITHUB_SHA.zip
+        run: zip -qq -r ./$GITHUB_SHA.zip .
         shell: bash
 
       # ACCESS TOKEN을 통해 AWS 계정의 서비스에 접근할 수 있는 권한 얻기
