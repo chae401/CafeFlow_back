@@ -16,6 +16,7 @@ public class CafeService {
         Cafe cafe = cafeRepository.findById(cafeId)
                 .orElseThrow(() -> new NonExistentException("존재하지 않는 카페입니다."));
         cafe.setCount(cnt);
+        cafeRepository.save(cafe);
         return "SUCCESS";
     }
 
